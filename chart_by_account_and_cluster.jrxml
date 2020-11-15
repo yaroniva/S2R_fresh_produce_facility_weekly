@@ -1,0 +1,834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2020-11-08T01:00:44 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Account_temp_weekly_by_cluster" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="f7c73d72-b798-42d6-b440-85eb966ad4db">
+	<property name="ireport.jasperserver.url" value="http://52.27.104.231:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FreshApp_DB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="189"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="805"/>
+	<property name="net.sf.jasperreports.jdbc.fetch.size" value="1000"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="647"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="353"/>
+	<property name="ireport.jasperserver.report.resource" value="/Reports/CartaSense/Central_Server/Site_MKT_and_Charts_debug_2_files/chart_by_account_and_cluster.jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Reports/CartaSense/Central_Server/Site_MKT_and_Charts_debug_2"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 1_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 2_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 3_CH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 3_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 3_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 3_CD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 4_CG" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab 4_CT" mode="Opaque" backcolor="#005FB3">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Chart_Dataset" uuid="9c26b715-310a-48fd-8183-f7d7d9dcf774">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FreshApp_DB"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="197"/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="797"/>
+		<parameter name="interval" class="java.lang.String">
+			<parameterDescription><![CDATA[time interval string SQL interval format]]></parameterDescription>
+			<defaultValueExpression><![CDATA["1 week"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="language" class="java.lang.String">
+			<defaultValueExpression><![CDATA["russian"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="chart_zone_id" class="java.lang.String">
+			<defaultValueExpression><![CDATA["39623836666264652D663563322D3131"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[select *
+from (
+	select * 
+	from measurement
+	where sensor_id in (select code from sensor_facility where hex(zone_id) = $P{chart_zone_id})
+	and created > date_sub( date_sub(   date(now()) ,  interval 1 day ), interval $P!{interval})
+	and created < date(now())
+	order by sensor_id , created
+	) as meas
+	left join (
+		select max(temp_min) as lower_threshold_temp, min(temp_max) as upper_threshold_temp 
+		, max(hm_min) as lower_threshold_rh , min(hm_max) as upper_threshold_rh
+	from alert_setting
+	where hex(zone_id) = $P{chart_zone_id}
+	) as limits
+	on true]]>
+		</queryString>
+		<field name="id" class="java.lang.Object"/>
+		<field name="sensor_id" class="java.lang.Integer"/>
+		<field name="humidity" class="java.lang.Double"/>
+		<field name="temperature" class="java.lang.Double"/>
+		<field name="created" class="java.sql.Timestamp"/>
+		<field name="unique_key" class="java.lang.String"/>
+		<field name="lower_threshold_temp" class="java.lang.Double"/>
+		<field name="upper_threshold_temp" class="java.lang.Double"/>
+		<field name="lower_threshold_rh" class="java.lang.Double"/>
+		<field name="upper_threshold_rh" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="Table_dataset" uuid="e09218b1-1a03-4388-be09-6a9b06b5b182">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FreshApp_DB"/>
+		<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="222"/>
+		<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="772"/>
+		<parameter name="interval" class="java.lang.String">
+			<parameterDescription><![CDATA[time interval string SQL interval format]]></parameterDescription>
+			<defaultValueExpression><![CDATA[" 1 week"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="language" class="java.lang.String">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+			<defaultValueExpression><![CDATA["russian"]]></defaultValueExpression>
+		</parameter>
+		<parameter name="table_zone_id" class="java.lang.String">
+			<parameterDescription><![CDATA[]]></parameterDescription>
+			<defaultValueExpression><![CDATA["39623836666264652D663563322D3131"]]></defaultValueExpression>
+		</parameter>
+		<queryString language="SQL">
+			<![CDATA[select tag_stat.*, comment , comment_custom, date_sub( date(now()), interval 1 day) as last_date
+from (
+	select  makedate(extract(year from measurement_time) , dayofyear(measurement_time) ) as dd
+		, sensor_id as tagid
+		,max(measurement_value) as "Max Temp"
+		,min(measurement_value) as "Min Temp"
+		,avg(measurement_value) as "Avg Temp"
+		,max(measurement_rh_value) as "Max RH"
+		,min(measurement_rh_value) as  "Min RH"
+		,avg(measurement_rh_value) as  "Avg  RH"
+		,format(avg(measurement_rh_value),1) as avg_rh_text
+		, -83.144/(8.3144e-3)/ln(avg(mkt_1))-273.15  as "MKT"
+	from (
+		select  sensor_id, measurement.created as measurement_time 
+			,cast( temperature as float) as measurement_value , cast(humidity as float) as measurement_rh_value
+			,  exp(-83.144/(8.3144e-3*(cast(temperature as float)+273.15))) as mkt_1
+		from measurement
+         where sensor_id in ( select code from sensor_facility where hex(zone_id) = $P{table_zone_id})
+         	and created > date_sub( date_sub(   date(now()) ,  interval 1 day ), interval $P!{interval}    )
+             and created < date(now()  )
+		) as www1
+	group  by sensor_id
+	order by  sensor_id
+) as tag_stat
+left join	(
+	select code as sensor_id , comment,comment_custom
+	from sensor_facility
+	where hex(zone_id) = $P{table_zone_id}
+) as tag_info
+on tag_stat.tagid = tag_info.sensor_id]]>
+		</queryString>
+		<field name="dd" class="java.sql.Date"/>
+		<field name="tagid" class="java.lang.Integer"/>
+		<field name="Max Temp" class="java.lang.Double"/>
+		<field name="Min Temp" class="java.lang.Double"/>
+		<field name="Avg Temp" class="java.lang.Double"/>
+		<field name="Max RH" class="java.lang.Double"/>
+		<field name="Min RH" class="java.lang.Double"/>
+		<field name="Avg  RH" class="java.lang.Double"/>
+		<field name="avg_rh_text" class="java.lang.String"/>
+		<field name="MKT" class="java.lang.Double"/>
+		<field name="comment" class="java.lang.String"/>
+		<field name="comment_custom" class="java.lang.String"/>
+		<field name="last_date" class="java.sql.Date"/>
+	</subDataset>
+	<parameter name="report_interval" class="java.lang.String">
+		<parameterDescription><![CDATA[time interval string SQL interval format]]></parameterDescription>
+		<defaultValueExpression><![CDATA[" 1 week"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="report_language" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["english"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="zone_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA["39623836666264652D663563322D3131"]]></defaultValueExpression>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[select zone.* , hex(zone.id) as hex_zone_id,facility.title as facility_name , company.title as company_name
+from zone, facility, company
+where hex(zone.id) = $P{zone_id}
+and facility.id = zone.facility_id
+and company.id = facility.company_id]]>
+	</queryString>
+	<field name="id" class="java.lang.Object"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="created_at" class="java.sql.Timestamp"/>
+	<field name="updated_at" class="java.sql.Timestamp"/>
+	<field name="facility_id" class="java.lang.Object"/>
+	<field name="comment" class="java.lang.String"/>
+	<field name="floor_plan_id" class="java.lang.Object"/>
+	<field name="hex_zone_id" class="java.lang.String"/>
+	<field name="facility_name" class="java.lang.String"/>
+	<field name="company_name" class="java.lang.String"/>
+	<group name="Cluster group" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{id}]]></groupExpression>
+	</group>
+	<detail>
+		<band height="593" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+			<timeSeriesChart>
+				<chart evaluationTime="Group" evaluationGroup="Cluster group" renderType="svg" theme="aegean">
+					<reportElement mode="Transparent" x="0" y="300" width="555" height="208" isPrintInFirstWholeBand="true" printWhenGroupChanges="Cluster group" uuid="2ce1a41f-eda6-4c1a-8fe7-efa8909bedcd">
+						<property name="local_mesure_unitx" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.x" value="px"/>
+						<property name="net.sf.jasperreports.image.dpi" value="300"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<printWhenExpression><![CDATA[true]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="3.0" lineColor="#FFFFFF"/>
+					</box>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend position="Right">
+						<font fontName="DejaVu Sans" size="8"/>
+					</chartLegend>
+				</chart>
+				<timeSeriesDataset timePeriod="Minute">
+					<dataset>
+						<datasetRun subDataset="Chart_Dataset" uuid="22d9adb7-287f-4eea-9ccc-1074a89775d2">
+							<datasetParameter name="interval">
+								<datasetParameterExpression><![CDATA[$P{report_interval}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="chart_zone_id">
+								<datasetParameterExpression><![CDATA[$P{zone_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="language">
+								<datasetParameterExpression><![CDATA[$P{report_language}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+					<timeSeries>
+						<seriesExpression><![CDATA[IF(EQUALS($P{language},"english"),"Lower threshold","Ниже допустимого порога")]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{created}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{lower_threshold_rh}]]></valueExpression>
+					</timeSeries>
+					<timeSeries>
+						<seriesExpression><![CDATA[IF(EQUALS($P{language},"english"),"upper threshold","Выше допустимого порога")]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{created}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{upper_threshold_rh}]]></valueExpression>
+					</timeSeries>
+					<timeSeries>
+						<seriesExpression><![CDATA[$F{sensor_id}]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{created}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{humidity}]]></valueExpression>
+					</timeSeries>
+				</timeSeriesDataset>
+				<timeSeriesPlot isShowShapes="false">
+					<plot orientation="Horizontal"/>
+					<timeAxisFormat>
+						<axisFormat tickLabelMask="MM/dd  HH:mm" verticalTickLabels="true">
+							<labelFont>
+								<font fontName="Calibri"/>
+							</labelFont>
+							<tickLabelFont>
+								<font fontName="Calibri" size="8"/>
+							</tickLabelFont>
+						</axisFormat>
+					</timeAxisFormat>
+					<valueAxisLabelExpression><![CDATA[IF( EQUALS($P{report_language},"english")
+	 ,"RH [%]"
+ 	 ,"влажность [%]"
+	 )]]></valueAxisLabelExpression>
+					<valueAxisFormat>
+						<axisFormat tickLabelMask="###">
+							<labelFont>
+								<font fontName="DejaVu Sans"/>
+							</labelFont>
+							<tickLabelFont>
+								<font fontName="Calibri"/>
+							</tickLabelFont>
+						</axisFormat>
+					</valueAxisFormat>
+				</timeSeriesPlot>
+			</timeSeriesChart>
+			<timeSeriesChart>
+				<chart evaluationTime="Group" evaluationGroup="Cluster group" renderType="svg" theme="aegean">
+					<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="83" width="555" height="207" isPrintInFirstWholeBand="true" printWhenGroupChanges="Cluster group" uuid="967c5e74-8e91-4741-a076-8f35371dad3c">
+						<property name="local_mesure_unity" value="pixel"/>
+						<property name="com.jaspersoft.studio.unit.y" value="px"/>
+						<property name="local_mesure_unitheight" value="pixel"/>
+						<property name="net.sf.jasperreports.image.dpi" value="300"/>
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<printWhenExpression><![CDATA[true]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<pen lineWidth="3.0" lineColor="#FFFFFF"/>
+					</box>
+					<chartTitle color="#FFFFFF"/>
+					<chartSubtitle/>
+					<chartLegend position="Right">
+						<font fontName="DejaVu Sans" size="8"/>
+					</chartLegend>
+				</chart>
+				<timeSeriesDataset timePeriod="Minute">
+					<dataset>
+						<datasetRun subDataset="Chart_Dataset" uuid="f7b74fc1-03f1-4800-b8a9-3d70864a57cd">
+							<datasetParameter name="chart_zone_id">
+								<datasetParameterExpression><![CDATA[$P{zone_id}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="interval">
+								<datasetParameterExpression><![CDATA[$P{report_interval}]]></datasetParameterExpression>
+							</datasetParameter>
+							<datasetParameter name="language">
+								<datasetParameterExpression><![CDATA[$P{report_language}]]></datasetParameterExpression>
+							</datasetParameter>
+							<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+						</datasetRun>
+					</dataset>
+					<timeSeries>
+						<seriesExpression><![CDATA[IF(EQUALS($P{language},"english"),"lower threshold","Ниже допустимого порога")]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{created}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{lower_threshold_temp}]]></valueExpression>
+					</timeSeries>
+					<timeSeries>
+						<seriesExpression><![CDATA[IF(EQUALS($P{language},"english"),"upper threshold","Выше допустимого порога")]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{created}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{upper_threshold_temp}]]></valueExpression>
+					</timeSeries>
+					<timeSeries>
+						<seriesExpression><![CDATA[$F{sensor_id}]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{created}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{temperature}]]></valueExpression>
+					</timeSeries>
+				</timeSeriesDataset>
+				<timeSeriesPlot isShowLines="true" isShowShapes="false">
+					<plot orientation="Horizontal"/>
+					<timeAxisFormat>
+						<axisFormat tickLabelMask="MM/dd HH:mm" verticalTickLabels="true">
+							<labelFont>
+								<font fontName="Calibri"/>
+							</labelFont>
+							<tickLabelFont>
+								<font fontName="Calibri" size="8"/>
+							</tickLabelFont>
+						</axisFormat>
+					</timeAxisFormat>
+					<valueAxisLabelExpression><![CDATA[IF( EQUALS($P{report_language},"english")
+	 ,"Temperature "
+ 	 ,"Температура "
+	 )]]></valueAxisLabelExpression>
+					<valueAxisFormat>
+						<axisFormat tickLabelMask="###">
+							<labelFont>
+								<font fontName="DejaVu Sans"/>
+							</labelFont>
+							<tickLabelFont>
+								<font fontName="Calibri"/>
+							</tickLabelFont>
+						</axisFormat>
+					</valueAxisFormat>
+				</timeSeriesPlot>
+			</timeSeriesChart>
+			<componentElement>
+				<reportElement x="-1" y="530" width="556" height="50" uuid="ff217ae1-849f-4d76-9905-45bb8332fb3d">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 3_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 3_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 3_TD"/>
+					<printWhenExpression><![CDATA[true]]></printWhenExpression>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Table_dataset" uuid="83ebedb1-f9ed-49c0-bae6-bee922b7e909">
+						<datasetParameter name="language">
+							<datasetParameterExpression><![CDATA[$P{report_language}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="table_zone_id">
+							<datasetParameterExpression><![CDATA[$F{hex_zone_id}]]></datasetParameterExpression>
+						</datasetParameter>
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="54" uuid="a1053f86-e136-47e9-899b-8ddd037cc8b4">
+						<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="54" height="30" uuid="ea4ce608-72ac-488f-bf7b-a54ca57de9a4"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Date"
+ 	 ,"Дата"
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<property name="com.jaspersoft.studio.unit.height" value="px"/>
+							<textField pattern="dd/MM/yy">
+								<reportElement x="0" y="0" width="54" height="20" uuid="4ebb67f1-68e0-4e99-b556-c0d0214af6c5"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{last_date}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="bd122463-a59d-4375-9367-8b5d9b1ad4d1">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="156b35f1-c181-407b-a3dd-7fe158bdae1e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Sensor ID"
+ 	 ,"номер сенсора"
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="20" uuid="ff50c7cc-aa84-4ed1-beda-e4ffc1e1e13a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{tagid}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="119" uuid="b6371033-fd99-4ea6-92ef-899bd68ebb21">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="119" height="30" uuid="99305b40-d4c1-42e9-92d7-622c925d7e9a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Description"
+ 	 ,"Описание"
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="119" height="20" uuid="6d66af2f-e003-4b4d-9609-1b3e5a9f7c9a"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{comment} + " " +$F{comment_custom}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="43" uuid="3b797602-4931-45d9-91af-178f9b212363">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="43" height="30" uuid="71224e9f-b156-4eb0-87ed-908b42d16485"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<text><![CDATA[MKT]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField pattern="###.#">
+								<reportElement x="0" y="0" width="43" height="20" uuid="509b1151-b8c8-49b9-97b9-e74c67238841"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{MKT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="45" uuid="e76e744d-1edb-45dd-aadc-8bea5d2e751b">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="45" height="30" uuid="982effd4-7ac2-4d5a-ac1c-f852b028bc87"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Max temp."
+ 	 ,"Макс. Темп."
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField pattern="###.#">
+								<reportElement x="0" y="0" width="45" height="20" uuid="1d9478f3-1d3e-4c0a-9b6f-e87bfc9f2520"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Max Temp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="44" uuid="fb926fbf-1904-417f-b605-ce569d404837">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="44" height="30" uuid="d8475084-387d-4a9a-ba3c-85a9805647e6"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Min temp."
+ 	 ,"Мин. Темп."
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField pattern="###.#">
+								<reportElement x="0" y="0" width="44" height="20" uuid="3d7d4988-b993-44b9-a425-5a33b1ae1cc8"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Min Temp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="47" uuid="95ebf03d-4851-4f81-955d-38d86133ed1b">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="47" height="30" uuid="703dd497-5956-4be0-b193-ba41fff96d60"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Avg. temp."
+ 	 ,"Средняя темп."
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField pattern="###.#">
+								<reportElement x="0" y="0" width="47" height="20" uuid="a47f4c4a-9515-436d-b72a-f1957df77eae"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Avg Temp}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="ab1d84e8-36a5-494f-a200-0f84a086fc7f">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="52" height="30" uuid="0134f58a-6542-468e-b5d9-7329d6af3435"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Max. RH."
+ 	 ,"Макс. влажность"
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField pattern="###.#%">
+								<reportElement x="0" y="0" width="52" height="20" uuid="71b7c600-6e2e-42b2-aa84-aa708df0f138"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Max RH}/100.0]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="49" uuid="8fbb7317-8673-441d-adaa-2597246ea241">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="49" height="30" uuid="f5b93a55-6f7a-4577-8e0f-e1bc3b3b172e"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Min. RH."
+ 	 ,"Мин. Влажность"
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField pattern="###.#%">
+								<reportElement x="0" y="0" width="49" height="20" uuid="56800eb1-08bc-4c37-9efa-d5989614618b"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Min RH}/100.0]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="52" uuid="00b801d6-347a-4dc1-b556-7d0d38769fe6">
+						<jr:columnHeader style="Table 3_CH" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="52" height="30" uuid="66480753-5800-4fee-928b-9552788d1ed1"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="DejaVu Sans" size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
+	 ,"Avg. RH"
+ 	 ,"Средняя влажность"
+	 )]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="20">
+							<textField pattern="###.#%">
+								<reportElement x="0" y="0" width="52" height="20" uuid="967c6794-56bf-43e0-b3f4-9ba0a29631ed"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textFieldExpression><![CDATA[$F{Avg  RH}/100]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<textField isStretchWithOverflow="true">
+				<reportElement mode="Opaque" x="-21" y="3" width="597" height="72" forecolor="#000000" backcolor="#C1D9F5" uuid="52c4f231-95a9-496a-811d-aa88b9e3a9d2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="DejaVu Sans" size="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					<paragraph lineSpacing="Single" spacingBefore="4" spacingAfter="4"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name} + "  /   " + $F{facility_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

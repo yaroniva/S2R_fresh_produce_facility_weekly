@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2020-11-10T18:26:37 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" uuid="201c4fcd-7ebf-4b29-bd6e-9fff6d488860">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FreshApp_DB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="ireport.jasperserver.url" value="http://52.27.104.231:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.user" value="jasperadmin"/>
+	<property name="ireport.jasperserver.report.resource" value="/Reports/CartaSense/FreshApp/BI/Weekly_Pharma_Report_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Reports/CartaSense/FreshApp/BI/Weekly_Pharma_Report"/>
+	<property name="net.sf.jasperreports.export.pdf.metadata.author" value="CartaSense"/>
+	<property name="net.sf.jasperreports.export.pdf.metadata.title" value="CartaSense mapping report"/>
+	<property name="net.sf.jasperreports.export.pdf.permissions.denied" value="FILL_IN"/>
+	<parameter name="report_interrval" class="java.lang.String">
+		<defaultValueExpression><![CDATA["1 week"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="language" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["russian"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="customer_logo" class="java.lang.Boolean">
+		<parameterDescription><![CDATA[logo file should exist <account_name>.png]]></parameterDescription>
+		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
+	</parameter>
+	<parameter name="member_id" class="java.lang.String">
+		<parameterDescription><![CDATA[]]></parameterDescription>
+		<defaultValueExpression><![CDATA["ferrero@cartasense.com"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[with recursive company_tree ( company_id , company_name , company_level , hq_id) as (
+-- Anchor 
+	select id as company_id, title as company_name, 1 as company_level , hq_id
+	from company 
+	where id = ( select company_id from member where trim(lower(member.email)) = $P{member_id} )
+	union all
+-- recursive
+	select c.id as company_id, c.title as company_name ,company_level + 1, c.hq_id
+	from company c
+	inner join company_tree 
+	on company_tree.company_id = c.hq_id
+)
+select *
+from(
+	select * 
+		from (
+			select * 
+			from company_tree
+		) as c1
+	left join (
+		select id as facility_id, hex(id) as hex_facility_id, company_id as facility_company_id , title as facility_title
+		from facility
+		) as f1
+	on c1.company_id = f1.facility_company_id
+) as m1
+left join (
+	select id as zone_id , hex(id) as hex_zone_id , name as zone_name , facility_id as zone_facility_id 
+	from zone
+) as z1
+on m1.facility_id  = z1.zone_facility_id
+where zone_name is not null]]>
+	</queryString>
+	<field name="company_id" class="java.lang.Object"/>
+	<field name="company_name" class="java.lang.String"/>
+	<field name="company_level" class="java.lang.Long"/>
+	<field name="hq_id" class="java.lang.Object"/>
+	<field name="facility_id" class="java.lang.Object"/>
+	<field name="hex_facility_id" class="java.lang.String"/>
+	<field name="facility_company_id" class="java.lang.Object"/>
+	<field name="facility_title" class="java.lang.String"/>
+	<field name="zone_id" class="java.lang.Object"/>
+	<field name="hex_zone_id" class="java.lang.String"/>
+	<field name="zone_name" class="java.lang.String"/>
+	<field name="zone_facility_id" class="java.lang.Object"/>
+	<group name="fake_title_sensor_log">
+		<groupExpression><![CDATA[$F{zone_id}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="1" width="550" height="33" forecolor="#000000" backcolor="#FFFFFF" uuid="21dd1bea-08f2-4f44-842d-75b93318d818">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="DejaVu Sans" size="20" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Weekly  Report: " + $F{company_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="-20" y="34" width="595" height="10" forecolor="#FFFFFF" backcolor="#6C61FA" uuid="37e81510-50b5-4535-ba25-1ee3873b856f">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="none">
+					<font fontName="DejaVu Sans" size="4" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["emailt: " +$P{member_id}+"/ company: " + $F{company_name}+" / interval: "+$P{report_interrval}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="447">
+			<subreport>
+				<reportElement x="-20" y="16" width="583" height="424" uuid="9fd55343-5843-4601-a645-fbca46751252">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<subreportParameter name="zone_id">
+					<subreportParameterExpression><![CDATA[$F{hex_zone_id}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="report_language">
+					<subreportParameterExpression><![CDATA[$P{language}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="report_interval">
+					<subreportParameterExpression><![CDATA[$P{report_interrval}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA["chart_by_account_and_cluster.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="53" splitType="Stretch">
+			<printWhenExpression><![CDATA[true]]></printWhenExpression>
+			<staticText>
+				<reportElement x="351" y="10" width="50" height="30" uuid="0fab34e5-1851-4ff1-89f7-8608774e2997"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="calibri"/>
+				</textElement>
+				<text><![CDATA[Page #  ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="401" y="10" width="49" height="30" uuid="30be0d77-5dbe-4a79-8257-d349495e4843"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="450" y="10" width="51" height="30" uuid="ae6f7207-d8ba-414a-9abc-98795cd7a2b2"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[Out Of]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="501" y="10" width="50" height="30" uuid="ac8febe8-d97b-4cff-82bd-a29059e21940"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Calibri"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement x="6" y="0" width="166" height="50" uuid="1bd26c2f-c7fe-4254-b4a4-53998798bbce"/>
+				<imageExpression><![CDATA["logo3.2.PNG"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
