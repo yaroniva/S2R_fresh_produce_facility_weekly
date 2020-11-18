@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.2.1  -->
-<!-- 2020-11-10T18:26:37 -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" uuid="201c4fcd-7ebf-4b29-bd6e-9fff6d488860">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FreshApp_DB"/>
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" isSummaryWithPageHeaderAndFooter="true" uuid="201c4fcd-7ebf-4b29-bd6e-9fff6d488860">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="UpWork_Jasper"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="ireport.jasperserver.url" value="http://52.27.104.231:8080/jasperserver/"/>
 	<property name="ireport.jasperserver.user" value="jasperadmin"/>
@@ -11,18 +10,18 @@
 	<property name="net.sf.jasperreports.export.pdf.metadata.author" value="CartaSense"/>
 	<property name="net.sf.jasperreports.export.pdf.metadata.title" value="CartaSense mapping report"/>
 	<property name="net.sf.jasperreports.export.pdf.permissions.denied" value="FILL_IN"/>
-	<parameter name="report_interrval" class="java.lang.String">
+	<parameter name="report_interrval" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA["1 week"]]></defaultValueExpression>
 	</parameter>
-	<parameter name="language" class="java.lang.String">
+	<parameter name="language" class="java.lang.String" isForPrompting="false">
 		<parameterDescription><![CDATA[]]></parameterDescription>
 		<defaultValueExpression><![CDATA["russian"]]></defaultValueExpression>
 	</parameter>
-	<parameter name="customer_logo" class="java.lang.Boolean">
+	<parameter name="customer_logo" class="java.lang.Boolean" isForPrompting="false">
 		<parameterDescription><![CDATA[logo file should exist <account_name>.png]]></parameterDescription>
 		<defaultValueExpression><![CDATA[false]]></defaultValueExpression>
 	</parameter>
-	<parameter name="member_id" class="java.lang.String">
+	<parameter name="member_id" class="java.lang.String" isForPrompting="false">
 		<parameterDescription><![CDATA[]]></parameterDescription>
 		<defaultValueExpression><![CDATA["ferrero@cartasense.com"]]></defaultValueExpression>
 	</parameter>
@@ -59,18 +58,64 @@ left join (
 on m1.facility_id  = z1.zone_facility_id
 where zone_name is not null]]>
 	</queryString>
-	<field name="company_id" class="java.lang.Object"/>
-	<field name="company_name" class="java.lang.String"/>
-	<field name="company_level" class="java.lang.Long"/>
-	<field name="hq_id" class="java.lang.Object"/>
-	<field name="facility_id" class="java.lang.Object"/>
-	<field name="hex_facility_id" class="java.lang.String"/>
-	<field name="facility_company_id" class="java.lang.Object"/>
-	<field name="facility_title" class="java.lang.String"/>
-	<field name="zone_id" class="java.lang.Object"/>
-	<field name="hex_zone_id" class="java.lang.String"/>
-	<field name="zone_name" class="java.lang.String"/>
-	<field name="zone_facility_id" class="java.lang.Object"/>
+	<field name="company_id" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="company_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="company_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="company_tree"/>
+	</field>
+	<field name="company_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="company_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="company_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="company_tree"/>
+	</field>
+	<field name="company_level" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="company_level"/>
+		<property name="com.jaspersoft.studio.field.label" value="company_level"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="company_tree"/>
+	</field>
+	<field name="hq_id" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="hq_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="hq_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="company_tree"/>
+	</field>
+	<field name="facility_id" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="facility_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="facility_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facility"/>
+	</field>
+	<field name="hex_facility_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="hex_facility_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="hex_facility_id"/>
+	</field>
+	<field name="facility_company_id" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="facility_company_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="facility_company_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facility"/>
+	</field>
+	<field name="facility_title" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="facility_title"/>
+		<property name="com.jaspersoft.studio.field.label" value="facility_title"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="facility"/>
+	</field>
+	<field name="zone_id" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="zone_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="zone_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="zone"/>
+	</field>
+	<field name="hex_zone_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="hex_zone_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="hex_zone_id"/>
+	</field>
+	<field name="zone_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="zone_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="zone_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="zone"/>
+	</field>
+	<field name="zone_facility_id" class="byte[]">
+		<property name="com.jaspersoft.studio.field.name" value="zone_facility_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="zone_facility_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="zone"/>
+	</field>
 	<group name="fake_title_sensor_log">
 		<groupExpression><![CDATA[$F{zone_id}]]></groupExpression>
 	</group>
@@ -89,7 +134,7 @@ where zone_name is not null]]>
 				<textFieldExpression><![CDATA["Weekly  Report: " + $F{company_name}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement mode="Opaque" x="-20" y="34" width="595" height="10" forecolor="#FFFFFF" backcolor="#6C61FA" uuid="37e81510-50b5-4535-ba25-1ee3873b856f">
+				<reportElement mode="Opaque" x="-20" y="34" width="595" height="10" forecolor="#000000" backcolor="#FCDA90" uuid="37e81510-50b5-4535-ba25-1ee3873b856f">
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Left" verticalAlignment="Middle" rotation="None" markup="none">
