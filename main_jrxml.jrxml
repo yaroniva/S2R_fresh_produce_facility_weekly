@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.15.0-dd49bfb94918336b8321d5507193f0169ead4e95  -->
+<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.3.1  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" isSummaryWithPageHeaderAndFooter="true" uuid="201c4fcd-7ebf-4b29-bd6e-9fff6d488860">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="UpWork_Jasper"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
@@ -58,7 +58,7 @@ left join (
 on m1.facility_id  = z1.zone_facility_id
 where zone_name is not null]]>
 	</queryString>
-	<field name="company_id" class="byte[]">
+	<field name="company_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="company_id"/>
 		<property name="com.jaspersoft.studio.field.label" value="company_id"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="company_tree"/>
@@ -73,12 +73,12 @@ where zone_name is not null]]>
 		<property name="com.jaspersoft.studio.field.label" value="company_level"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="company_tree"/>
 	</field>
-	<field name="hq_id" class="byte[]">
+	<field name="hq_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="hq_id"/>
 		<property name="com.jaspersoft.studio.field.label" value="hq_id"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="company_tree"/>
 	</field>
-	<field name="facility_id" class="byte[]">
+	<field name="facility_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="facility_id"/>
 		<property name="com.jaspersoft.studio.field.label" value="facility_id"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="facility"/>
@@ -87,7 +87,7 @@ where zone_name is not null]]>
 		<property name="com.jaspersoft.studio.field.name" value="hex_facility_id"/>
 		<property name="com.jaspersoft.studio.field.label" value="hex_facility_id"/>
 	</field>
-	<field name="facility_company_id" class="byte[]">
+	<field name="facility_company_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="facility_company_id"/>
 		<property name="com.jaspersoft.studio.field.label" value="facility_company_id"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="facility"/>
@@ -97,7 +97,7 @@ where zone_name is not null]]>
 		<property name="com.jaspersoft.studio.field.label" value="facility_title"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="facility"/>
 	</field>
-	<field name="zone_id" class="byte[]">
+	<field name="zone_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="zone_id"/>
 		<property name="com.jaspersoft.studio.field.label" value="zone_id"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="zone"/>
@@ -111,7 +111,7 @@ where zone_name is not null]]>
 		<property name="com.jaspersoft.studio.field.label" value="zone_name"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="zone"/>
 	</field>
-	<field name="zone_facility_id" class="byte[]">
+	<field name="zone_facility_id" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.name" value="zone_facility_id"/>
 		<property name="com.jaspersoft.studio.field.label" value="zone_facility_id"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="zone"/>

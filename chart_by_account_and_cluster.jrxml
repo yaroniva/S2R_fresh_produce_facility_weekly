@@ -827,17 +827,17 @@ and company.id = facility.company_id]]>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="60">
 							<textField pattern="###.#">
-								<reportElement x="0" y="0" width="53" height="20" forecolor="#0FFA17" uuid="3d7d4988-b993-44b9-a425-5a33b1ae1cc8"/>
+								<reportElement x="0" y="0" width="53" height="20" forecolor="#000000" uuid="3d7d4988-b993-44b9-a425-5a33b1ae1cc8"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Min Temp}]]></textFieldExpression>
 							</textField>
 							<textField pattern="###.#">
-								<reportElement x="0" y="20" width="53" height="20" forecolor="#F7BB23" uuid="a47f4c4a-9515-436d-b72a-f1957df77eae"/>
+								<reportElement x="0" y="20" width="53" height="20" forecolor="#000000" uuid="a47f4c4a-9515-436d-b72a-f1957df77eae"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Avg Temp}]]></textFieldExpression>
 							</textField>
 							<textField pattern="###.#">
-								<reportElement x="0" y="40" width="53" height="20" forecolor="#FA2E05" uuid="1d9478f3-1d3e-4c0a-9b6f-e87bfc9f2520"/>
+								<reportElement x="0" y="40" width="53" height="20" forecolor="#000000" uuid="1d9478f3-1d3e-4c0a-9b6f-e87bfc9f2520"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Max Temp}]]></textFieldExpression>
 							</textField>
@@ -879,17 +879,17 @@ and company.id = facility.company_id]]>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="60">
 							<textField pattern="###.#%">
-								<reportElement x="0" y="0" width="59" height="20" forecolor="#0FFA17" uuid="56800eb1-08bc-4c37-9efa-d5989614618b"/>
+								<reportElement x="0" y="0" width="59" height="20" forecolor="#000000" uuid="56800eb1-08bc-4c37-9efa-d5989614618b"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Min RH}/100.0]]></textFieldExpression>
 							</textField>
 							<textField pattern="###.#%">
-								<reportElement x="0" y="20" width="59" height="20" forecolor="#F7BB23" uuid="967c6794-56bf-43e0-b3f4-9ba0a29631ed"/>
+								<reportElement x="0" y="20" width="59" height="20" forecolor="#000000" uuid="967c6794-56bf-43e0-b3f4-9ba0a29631ed"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Avg  RH}/100]]></textFieldExpression>
 							</textField>
 							<textField pattern="###.#%">
-								<reportElement x="0" y="40" width="59" height="20" forecolor="#FA2E05" uuid="71b7c600-6e2e-42b2-aa84-aa708df0f138"/>
+								<reportElement x="0" y="40" width="59" height="20" forecolor="#000000" uuid="71b7c600-6e2e-42b2-aa84-aa708df0f138"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Max RH}/100.0]]></textFieldExpression>
 							</textField>
@@ -899,17 +899,7 @@ and company.id = facility.company_id]]>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
 						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
 							<textField>
-								<reportElement x="0" y="0" width="46" height="15" uuid="230163c1-e075-4046-9c2d-084ee5e32d94"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="DejaVu Sans" size="8"/>
-								</textElement>
-								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
-	 ,"Max T. Alt"
- 	 ,"Макс Т. Альт"
-	 )]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement x="0" y="15" width="46" height="15" uuid="7a76725e-ead9-430d-bf8d-ad27d815ec43"/>
+								<reportElement x="0" y="0" width="46" height="30" uuid="7a76725e-ead9-430d-bf8d-ad27d815ec43"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="DejaVu Sans" size="8"/>
 								</textElement>
@@ -921,12 +911,7 @@ and company.id = facility.company_id]]>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="60">
 							<textField>
-								<reportElement x="0" y="0" width="46" height="30" uuid="c065ce23-c4ad-4e90-8d04-e51c27e832d9"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{temp_max}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement x="0" y="30" width="46" height="30" uuid="811af5b7-e1d3-4fca-baa3-684e7226ca59"/>
+								<reportElement x="0" y="0" width="46" height="60" uuid="811af5b7-e1d3-4fca-baa3-684e7226ca59"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Temp over max alert}]]></textFieldExpression>
 							</textField>
@@ -936,17 +921,7 @@ and company.id = facility.company_id]]>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
 						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
 							<textField>
-								<reportElement x="0" y="0" width="48" height="15" uuid="ca95ca45-0130-4247-9215-66f38ed30a4c"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="DejaVu Sans" size="8"/>
-								</textElement>
-								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
-	 ,"Min T. Alt"
- 	 ,"Мин Т. Альт"
-	 )]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement x="0" y="15" width="48" height="15" uuid="34f37232-3a3d-4c6f-8a1d-1c5a09d4de97"/>
+								<reportElement x="0" y="0" width="48" height="30" uuid="34f37232-3a3d-4c6f-8a1d-1c5a09d4de97"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="DejaVu Sans" size="8"/>
 								</textElement>
@@ -958,12 +933,7 @@ and company.id = facility.company_id]]>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="60">
 							<textField>
-								<reportElement x="0" y="0" width="48" height="30" uuid="558478a3-3d36-4269-a4b9-6835d775001d"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{temp_min}]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement x="0" y="30" width="48" height="30" uuid="d5992d0b-6edc-4b62-bdc4-9960ae8864e8"/>
+								<reportElement x="0" y="0" width="48" height="60" uuid="d5992d0b-6edc-4b62-bdc4-9960ae8864e8"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Temp under min alert}]]></textFieldExpression>
 							</textField>
@@ -973,17 +943,7 @@ and company.id = facility.company_id]]>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
 						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
 							<textField>
-								<reportElement x="0" y="0" width="47" height="15" uuid="4b300261-48b0-47bd-95ee-e67d94811aee"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="DejaVu Sans" size="8"/>
-								</textElement>
-								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
-	 ,"Max Hm. Alt"
- 	 ,"Макс Хм. Alt"
-	 )]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement x="0" y="15" width="47" height="15" uuid="ae28907d-1bcb-4703-a8a3-05ee9f5c91a1"/>
+								<reportElement x="0" y="0" width="47" height="30" uuid="ae28907d-1bcb-4703-a8a3-05ee9f5c91a1"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="DejaVu Sans" size="8"/>
 								</textElement>
@@ -994,13 +954,8 @@ and company.id = facility.company_id]]>
 							</textField>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="60">
-							<textField pattern="###.#%">
-								<reportElement x="0" y="0" width="47" height="30" uuid="ab75f1c0-ffae-4e79-bf17-0e3f8d723279"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{hm_max}/100]]></textFieldExpression>
-							</textField>
 							<textField>
-								<reportElement x="0" y="30" width="47" height="30" uuid="05616b11-3b61-47c8-9a34-fc0a08cc7304"/>
+								<reportElement x="0" y="0" width="47" height="60" uuid="05616b11-3b61-47c8-9a34-fc0a08cc7304"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Humidity over max alert}]]></textFieldExpression>
 							</textField>
@@ -1010,17 +965,7 @@ and company.id = facility.company_id]]>
 						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
 						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
 							<textField>
-								<reportElement x="0" y="0" width="46" height="15" uuid="c1bb1777-9098-4c82-873e-ff838d31ad51"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="DejaVu Sans" size="8"/>
-								</textElement>
-								<textFieldExpression><![CDATA[IF( EQUALS($P{language},"english")
-	 ,"Min Hm. Alt"
- 	 ,"Средняя влажность"
-	 )]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement x="0" y="15" width="46" height="15" uuid="09031f5b-503a-422c-9c81-d1f77c387b1f"/>
+								<reportElement x="0" y="0" width="46" height="30" uuid="09031f5b-503a-422c-9c81-d1f77c387b1f"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
 									<font fontName="DejaVu Sans" size="8"/>
 								</textElement>
@@ -1031,13 +976,8 @@ and company.id = facility.company_id]]>
 							</textField>
 						</jr:columnHeader>
 						<jr:detailCell style="Table 3_TD" height="60">
-							<textField pattern="###.#%">
-								<reportElement x="0" y="0" width="46" height="30" uuid="e9f8f6f7-7a5e-4d51-ba71-34f03cf1c475"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{hm_min}/100]]></textFieldExpression>
-							</textField>
 							<textField>
-								<reportElement x="0" y="30" width="46" height="30" uuid="e574f1e5-a7b9-486a-ac4d-185cb551953a"/>
+								<reportElement x="0" y="0" width="46" height="60" uuid="e574f1e5-a7b9-486a-ac4d-185cb551953a"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle"/>
 								<textFieldExpression><![CDATA[$F{Humidity under min alert}]]></textFieldExpression>
 							</textField>
