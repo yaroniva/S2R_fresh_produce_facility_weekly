@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.3.1  -->
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2020-11-19T16:37:11 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="main_report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="10" bottomMargin="10" isSummaryWithPageHeaderAndFooter="true" uuid="201c4fcd-7ebf-4b29-bd6e-9fff6d488860">
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="UpWork_Jasper"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="FreshApp_DB"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="ireport.jasperserver.url" value="http://52.27.104.231:8080/jasperserver/"/>
 	<property name="ireport.jasperserver.user" value="jasperadmin"/>
-	<property name="ireport.jasperserver.report.resource" value="/Reports/CartaSense/FreshApp/BI/Weekly_Pharma_Report_files/main_jrxml"/>
-	<property name="ireport.jasperserver.reportUnit" value="/Reports/CartaSense/FreshApp/BI/Weekly_Pharma_Report"/>
+	<property name="ireport.jasperserver.report.resource" value="/Reports/CartaSense/FreshApp/BI/Weekly_facility_Fresh_produce_report_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/Reports/CartaSense/FreshApp/BI/Weekly_facility_Fresh_produce_report"/>
 	<property name="net.sf.jasperreports.export.pdf.metadata.author" value="CartaSense"/>
 	<property name="net.sf.jasperreports.export.pdf.metadata.title" value="CartaSense mapping report"/>
 	<property name="net.sf.jasperreports.export.pdf.permissions.denied" value="FILL_IN"/>

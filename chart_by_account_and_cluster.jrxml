@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.15.0.final using JasperReports Library version 6.3.1  -->
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2020-11-19T11:32:41 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Account_temp_weekly_by_cluster" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="0" bottomMargin="0" uuid="f7c73d72-b798-42d6-b440-85eb966ad4db">
 	<property name="ireport.jasperserver.url" value="http://52.27.104.231:8080/jasperserver/"/>
 	<property name="ireport.jasperserver.user" value="jasperadmin"/>
@@ -564,7 +565,7 @@ and company.id = facility.company_id]]>
 					</chartLegend>
 				</chart>
 				<timeSeriesDataset timePeriod="Minute">
-					<dataset resetType="Report">
+					<dataset>
 						<datasetRun subDataset="Chart_Dataset" uuid="22d9adb7-287f-4eea-9ccc-1074a89775d2">
 							<datasetParameter name="interval">
 								<datasetParameterExpression><![CDATA[$P{report_interval}]]></datasetParameterExpression>
@@ -642,7 +643,7 @@ and company.id = facility.company_id]]>
 					</chartLegend>
 				</chart>
 				<timeSeriesDataset timePeriod="Minute">
-					<dataset resetType="Report">
+					<dataset>
 						<datasetRun subDataset="Chart_Dataset" uuid="f7b74fc1-03f1-4800-b8a9-3d70864a57cd">
 							<datasetParameter name="chart_zone_id">
 								<datasetParameterExpression><![CDATA[$P{zone_id}]]></datasetParameterExpression>
@@ -689,7 +690,7 @@ and company.id = facility.company_id]]>
  	 ,"Температура "
 	 )]]></valueAxisLabelExpression>
 					<valueAxisFormat>
-						<axisFormat tickLabelMask="###">
+						<axisFormat tickLabelMask="###.#">
 							<labelFont>
 								<font fontName="DejaVu Sans"/>
 							</labelFont>
